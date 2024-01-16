@@ -1,0 +1,307 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Hind Siliguri";
+}
+*::selection{
+    color: #fff;
+    background-color: #000;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+    position:relative;
+    background-color: #f7f7f7;
+}
+#nav{
+    height: 120px;
+    width: 100%;
+    padding: 16px;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part1{
+    height: 83px;
+    overflow: hidden;
+}
+#nav-part1 svg{
+    display: block;
+}
+#nav-part2{
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+}
+#nav-part2 #links{
+    padding-top: 9px;
+}
+#nav-part2 #links a{
+    text-decoration: none;
+    color: black;
+    margin: 9px;
+}
+#nav-part2 #icons{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    border-radius: 50px;
+    background-color: #f7f7f7;
+}
+#nav-part2 #icons i{
+    margin: 5px;
+    font-size: 18px;
+}
+#cursor{
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 20vh;
+
+}
+#page1 h1{
+    font-family: "Hind Siliguri";
+    font-size: 15vw;
+    line-height: 12vw;
+    text-transform: uppercase;
+}
+#video-con{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-top: 1vw;
+    overflow: hidden;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#play{
+    height: 100px;
+    width: 100px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    scale: 0;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    padding: 1vh 2vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 .elem .dets{
+    height: 60px;
+    width: 70%;
+    border-radius: 50px;
+    position: absolute;
+    background-color: bisque;
+    z-index: 9;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.child{
+    height: 55vh;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    #nav{
+        height: 80px;
+        width: 100%;
+        padding: 10px;
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #nav-part1{
+        height: 60px;
+        overflow: hidden;
+    }
+    #nav-part1 #twogood{
+        display: block;
+        height: 60px;
+        width: 60px;
+    }
+    #nav-part1 #twogoodlogo{
+        display: block;
+        height: 50px;
+        width: 40px;
+    }
+    #nav-part2{
+        display: flex;
+        gap: 30px;
+        margin-right: 20px;
+    }
+    #nav-part2 #links{
+        padding-top: 9px;
+        display: none;
+    }
+    #nav-part2 #links a{
+        text-decoration: none;
+        color: black;
+        margin: 9px;
+    }
+    #nav-part2 #icons{
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        /* margin-left: 40px; */
+        border-radius: 50px;
+        background-color: #f7f7f7;
+    }
+    #nav-part2 #icons i{
+        margin: 5px;
+        font-size: 10px;
+    }
+    #page1 h1{
+        font-size: 16vw;
+        line-height: 15vw;
+    }
+
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 1vw;
+        padding-top: 25vh;
+    
+    }
+
+    #video-con{
+        height: 25vh;
+        width: 95%;
+        margin-top: 1vw;
+        overflow: hidden;
+    }
+
+    #play{    
+        opacity: 1;
+        scale: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        padding: 1vh 2vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    #page2 .elem .dets{
+        height: 40px;
+        width: 70%;
+        border-radius: 50px;
+        position: absolute;
+        background-color: bisque;
+        z-index: 9;
+    }
+    
+    #page3{
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .child{
+        height: 55vh;
+        width: 40vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .child img{
+        height: 90%;
+        width: 90%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+}
